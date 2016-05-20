@@ -1,0 +1,92 @@
+/*translate carousel css*/
+
+#carousel {
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 258px;
+    perspective: 1000px;
+    border-radius: 25px;
+}
+#carousel a,input {
+    position: absolute;
+}
+#carousel input:checked+a {
+    transform: translate3d(0,0,0);
+    z-index: 100;
+}
+#carousel a {
+    display: block;
+    width: 100%;
+    transform: translate3d(-600px,0,-500px);
+    transition:transform 2s ease ;
+}
+#carousel a img {
+    max-width: 100%;
+    border-radius: 25px;
+}
+#carousel input[type='radio'] {
+    position: absolute;
+    left: 0;
+    z-index: 120;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    opacity: 0.5;
+    cursor: pointer;
+    -webkit-transition: opacity 1s ease,transform 2s ease-out ;
+    -moz-transition: opacity 1s ease ;
+    -ms-transition: opacity 1s ease ;
+    -o-transition: opacity 1s ease ;
+    transition: opacity 1s ease,transform 2s ease-out ;
+}
+#carousel input[type='radio']:hover {
+    opacity: 1;
+
+}
+#carousel input[type='radio']:checked {
+    left: 10px;
+    opacity: 1;
+    transform: translate(10px,0);
+}
+#carousel input[type='radio']:checked + a {
+    z-index: 110;
+    opacity: 1;
+}
+#carousel input[type='radio']:after {
+    content: '';
+    display: block;
+    height: 52px;
+    background-size:cover;
+    background-position: center;
+    border-radius: 50%;
+
+}
+#carousel input[type='radio']:nth-of-type(1):after {
+    background-image: url("../image/theme_jacket.jpg");
+}
+#carousel input[type='radio']:nth-of-type(2) {
+    top: 20%;
+}
+#carousel input[type='radio']:nth-of-type(2):after {
+    background-image: url("../image/theme_basketball.jpg");
+}
+#carousel input[type='radio']:nth-of-type(3) {
+    top: 40%;
+}
+#carousel input[type='radio']:nth-of-type(3):after {
+    background-image: url("../image/theme_kuangwei.jpg");
+}
+#carousel input[type='radio']:nth-of-type(4) {
+    top: 60%;
+}
+#carousel input[type='radio']:nth-of-type(4):after {
+    background-image: url("../image/theme_summer.jpg");
+}
+#carousel input[type='radio']:nth-of-type(5) {
+    top: 80%;
+}
+#carousel input[type='radio']:nth-of-type(5):after {
+    background-image: url("../image/theme_running.jpg");
+}

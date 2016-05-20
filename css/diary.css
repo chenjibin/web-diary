@@ -1,0 +1,207 @@
+html {
+	height: 100%;
+
+}
+body {
+	font-family:"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+ul,li,p,h1,h2,h3 {
+	padding:0;
+	margin:0;
+}
+/*drag.css*/
+#login-box {
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -164.5px;
+	margin-left: -214.5px;
+	padding: 10px;
+	border: 5px solid #ddd;
+	background: #E2BFF2;
+}
+#login-box h1 {
+	font-size: 24px;
+	text-align: center;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+#login-box h1:hover {
+	cursor: move;
+}
+#login-box form {
+	padding: 0 80px;
+}
+#login-box label {
+	display: block;
+	width: 80px;
+	float: left;
+	margin-left: -80px;
+	text-align: right;
+	margin-top: 5px;
+	font-size: 18px;
+	color: #673AB7;
+}
+#login-box input[type='text'],[type='password'] {
+	width: 100%;
+	margin: 5px 0;
+	font-size: 24px;
+	border-radius: 5px;
+	outline: none;
+	border: 0;
+	text-indent: 10px;
+}
+#login-box input[type='submit'],[type='button'] {
+	padding: 10px;
+	width: 49%;
+	border: 0;
+	color: #fff;
+	background-color: #8A8AEB;
+	margin-top: 20px;
+	transition: background-color 0.2s ease;
+}
+#login-box input[type='submit']:hover,[type='button']:hover {
+	background-color: #333;
+	cursor:pointer;
+}
+/*Lottery.css*/
+#lottery-box {
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -164.5px;
+	margin-left: -214.5px;
+	padding: 10px;
+	border: 5px solid #ddd;
+	background: #E2BFF2;
+	text-align:center;
+}
+#lottery-box span {
+	display:block;
+	margin:30px 0;
+	width:100%;
+	text-align:center;
+	font-size:24px;
+	color:orangered;
+	font-weight:700;
+	word-spacing: 10px;
+}
+#lottery-box button {
+	border:0;
+	background:#4D4DDE;
+	outline:none;
+	font-size:16px;
+	color:#fff;
+	padding:5px 10px;
+	transition:background 0.2s ease;
+}
+#lottery-box button:hover {
+	cursor:pointer;
+	background:#7E7EF4;
+}
+#lottery-box button.forbidden {
+	background:#666;
+}
+/*carousel.css*/
+#carousel {
+	position: relative;
+	width: 600px;
+	height:310px;
+	margin: 0 auto;
+}
+#carousel input[type='radio'] {
+	position: absolute;
+	bottom: 0;
+	z-index: 120;
+	width: 20%;
+	height: 52px;
+	margin: 0;
+	opacity: 0.5;
+	cursor: pointer;
+	-webkit-transition: opacity 1s ease ;
+	-moz-transition: opacity 1s ease ;
+	-ms-transition: opacity 1s ease ;
+	-o-transition: opacity 1s ease ;
+	transition: opacity 1s ease ;
+}
+#carousel input[type='radio']:hover {
+	opacity: 1;
+
+}
+#carousel input[type='radio']:checked {
+	opacity: 1;
+}
+#carousel input[type='radio']:checked + a {
+	z-index: 110;
+	opacity: 1;
+}
+#carousel input[type='radio']:after {
+	content: '';
+	display: block;
+	height: 52px;
+	background-size:cover;
+
+}
+#carousel input[type='radio']:nth-of-type(1):after {
+	background-image: url("../image/theme_jacket.jpg");
+}
+#carousel input[type='radio']:nth-of-type(2) {
+	left: 20%;
+}
+#carousel input[type='radio']:nth-of-type(2):after {
+	background-image: url("../image/theme_basketball.jpg");
+}
+#carousel input[type='radio']:nth-of-type(3) {
+	left: 40%;
+}
+#carousel input[type='radio']:nth-of-type(3):after {
+	background-image: url("../image/theme_kuangwei.jpg");
+}
+#carousel input[type='radio']:nth-of-type(4) {
+	left: 60%;
+}
+#carousel input[type='radio']:nth-of-type(4):after {
+	background-image: url("../image/theme_summer.jpg");
+}
+#carousel input[type='radio']:nth-of-type(5) {
+	left: 80%;
+}
+#carousel input[type='radio']:nth-of-type(5):after {
+	background-image: url("../image/theme_running.jpg");
+}
+#carousel a {
+	position: absolute;
+	width: 100%;
+	top:0;
+	z-index: 99;
+	transition: all 1s ease-in-out;
+	opacity: 0;
+}
+#carousel a img {
+	max-width: 100%;
+}
+#carousel div {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+#carousel div img {
+	width: 20%;
+	float: left;
+	opacity: 0.5;
+	transition: opacity 1s ease;
+}
+
+#carousel img.fs-opacity-none {
+	opacity: 1;
+
+}
+
+
